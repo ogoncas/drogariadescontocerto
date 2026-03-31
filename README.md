@@ -30,17 +30,6 @@ Este é o repositório do site institucional e painel administrativo da **Drogar
 * `admin.html`: Painel de controle protegido por login para gerenciamento de produtos.
 * `LICENSE`: Arquivo contendo os termos de direitos autorais.
 
-## ⚙️ Configuração Local
-
-Para rodar o projeto localmente:
-
-1.  Clone o repositório:
-    ```bash
-    git clone https://github.com/seu-usuario/drogaria-desconto-certo.git
-    ```
-2.  Abra qualquer um dos arquivos `.html` diretamente no seu navegador ou utilize a extensão **Live Server** no VS Code.
-3.  **Nota:** O projeto já está configurado com as credenciais do Firebase da Drogaria. Caso queira usar seu próprio banco, altere a constante `firebaseConfig` nos scripts de cada arquivo.
-
 ## ⚖️ Licença
 
 Este projeto é **proprietário**. 
