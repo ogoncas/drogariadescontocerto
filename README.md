@@ -1,6 +1,6 @@
 # 💊 Drogaria Desconto Certo
 
-Este é o repositório do site institucional e painel administrativo da **Drogaria Desconto Certo**. O projeto foi desenvolvido com foco em performance e design moderno.
+Este é o repositório do site institucional da **Drogaria Desconto Certo**. O projeto foi desenvolvido com foco em performance e design moderno.
 
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
