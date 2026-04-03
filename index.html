@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Drogaria Desconto Certo - Saúde e economia em um só lugar. Entrega rápida e preços baixos.">
-    <title>Drogaria Desconto Certo • Saúde e Economia</title>
-    
+    <!-- Meta tags para SEO e compartilhamento em redes sociais -->
+    <meta name="description" content="Drogaria Desconto Certo - Farmácia com entrega rápida em Nova Iguaçu e região. Medicamentos, perfumaria e preços baixos. Atendemos Cerâmica, NI e arredores.">
+    <meta name="keywords" content="drogaria nova iguaçu, farmácia nova iguaçu, farmácia entrega nova iguaçu, desconto certo, remédios baratos nova iguaçu, farmácia cerâmica ni, drogaria com entrega">
+    <meta name="author" content="Drogaria Desconto Certo">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://drogariadescontocerto.com.br/">
+
+    <!-- Open Graph para compartilhamento no Facebook -->
+    <meta property="og:title" content="Drogaria Desconto Certo • Farmácia em Nova Iguaçu com Entrega Rápida">
+    <meta property="og:description" content="Saúde de qualidade com preço justo. Entrega rápida em toda Nova Iguaçu. Peça pelo WhatsApp!">
+    <meta property="og:image" content="galeria/3.jpeg">
+    <meta property="og:url" content="https://drogariadescontocerto.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Cards para compartilhamento no Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Drogaria Desconto Certo • Farmácia em Nova Iguaçu">
+    <meta name="twitter:description" content="Entrega rápida de medicamentos e perfumaria em Nova Iguaçu. Preços baixos e atendimento humano.">
+    <meta name="twitter:image" content="galeria/3.jpeg">
+
+    <title>Drogaria Desconto Certo • Farmácia em Nova Iguaçu com Entrega Rápida</title>
+
+    <!-- CDN do Tailwind CSS e configuração personalizada -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,38 +43,23 @@
             }
         }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Ícone do site -->
     <link rel="icon" type="image/png" href="logo.png">
-    
-    <style>
-        .section-header::after {
-            content: ''; display: block; width: 60px; height: 4px;
-            background: #D31526; margin: 12px auto; border-radius: 2px;
-        }
-        .media-hover:hover img { transform: scale(1.05); }
-        
-        /* Modal estilos adicionais */
-        #modal {
-            animation: fadeInModal 0.3s ease forwards;
-        }
-        @keyframes fadeInModal {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .modal-content img {
-            animation: zoomInModal 0.4s ease forwards;
-        }
-        @keyframes zoomInModal {
-            from { transform: scale(0.95); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-    </style>
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-sans antialiased text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900 transition-colors duration-300">
 
+    <!-- Cabeçalho fixo com navegação -->
     <header class="fixed w-full z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm transition-all duration-300">
         <nav class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center relative">
+            <!-- Logo e nome da drogaria -->
             <a href="index.html" class="flex items-center gap-3 group">
                 <img src="logo.png" alt="Logo Drogaria Desconto Certo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105">
                 <span class="font-logo text-2xl font-bold text-gray-800 dark:text-white tracking-tight">
@@ -60,6 +67,7 @@
                 </span>
             </a>
             
+            <!-- Menu de navegação para desktop -->
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600 dark:text-gray-300">
                 <a href="index.html#inicio" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">Início</a>
                 <a href="index.html#sobre" class="hover:text-red-600 dark:hover:text-red-400 transition-colors">Sobre Nós</a>
@@ -69,11 +77,13 @@
                 </a>
             </div>
 
+            <!-- Botão para menu mobile -->
             <button id="mobile-menu-btn" class="md:hidden text-gray-600 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 text-2xl focus:outline-none transition-colors">
                 <i id="menu-icon" class="fa-solid fa-bars"></i>
             </button>
         </nav>
 
+        <!-- Menu mobile oculto por padrão -->
         <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 px-6 py-4 shadow-xl absolute w-full left-0 top-20">
             <div class="flex flex-col gap-4 text-sm font-semibold text-gray-600 dark:text-gray-300">
                 <a href="index.html#inicio" class="mobile-link hover:text-red-600 dark:hover:text-red-400 transition-colors py-2">Início</a>
@@ -86,6 +96,7 @@
         </div>
     </header>
 
+    <!-- Seção de início com chamada para ação -->
     <section id="inicio" class="pt-32 pb-20 bg-gradient-to-b from-yellow-100/50 dark:from-yellow-900/10 to-white dark:to-gray-900">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -98,8 +109,9 @@
                     </a>
                 </div>
             </div>
+            <!-- Imagem principal da seção de início -->
             <div class="relative hidden md:block">
-                <img src="galeria/3.jpeg" alt="Farmácia" class="rounded-[2.5rem] shadow-2xl dark:shadow-gray-900/50">
+                <img src="galeria/3.jpeg" alt="Farmácia Drogaria Desconto Certo em Nova Iguaçu - Interior da loja" class="rounded-[2.5rem] shadow-2xl dark:shadow-gray-900/50" loading="eager">
                 <div class="absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-6 rounded-3xl shadow-xl flex items-center gap-4 border border-red-50 dark:border-gray-700">
                     <div class="w-12 h-12 bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400 rounded-full flex items-center justify-center text-2xl">
                         <i class="fa-solid fa-truck-fast"></i>
@@ -113,6 +125,7 @@
         </div>
     </section>
 
+    <!-- Seção sobre a história da drogaria -->
     <section id="sobre" class="py-24 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -121,6 +134,7 @@
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Texto descritivo sobre a drogaria -->
                 <div class="space-y-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                     <p>
                         A <strong class="text-red-600 dark:text-red-500">Drogaria Desconto Certo</strong> nasceu com um propósito claro: levar saúde e bem-estar para as famílias de Nova Iguaçu, aliando um atendimento humano a preços que realmente cabem no bolso.
@@ -144,34 +158,27 @@
                     </ul>
                 </div>
 
+                <!-- Galeria de imagens e vídeo -->
                 <div class="space-y-4">
-                    <!-- === VÍDEO DO YOUTUBE (clicável) === -->
                     <div id="video-trigger" 
                          class="relative w-full aspect-video bg-gray-100 dark:bg-gray-800 rounded-3xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 group flex items-center justify-center cursor-pointer">
                         <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&q=80&w=800" 
-                             alt="Capa do Vídeo" 
+                             alt="Vídeo institucional da Drogaria Desconto Certo em Nova Iguaçu" 
                              class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply dark:mix-blend-overlay">
                         <div class="z-10 w-20 h-20 bg-red-600/90 text-white rounded-full flex items-center justify-center text-3xl shadow-xl group-hover:scale-110 group-hover:bg-red-600 transition-all duration-300">
                             <i class="fa-solid fa-play ml-1"></i>
                         </div>
                     </div>
 
-                    <!-- === GALERIA DE IMAGENS (clicáveis) === -->
                     <div class="grid grid-cols-3 gap-4">
                         <div class="media-hover aspect-square bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md cursor-pointer">
-                            <img src="galeria/2.jpeg" 
-                                 alt="Nossa Loja 1" 
-                                 class="w-full h-full object-cover transition-transform duration-500">
+                            <img src="galeria/2.jpeg" alt="Interior da Drogaria Desconto Certo em Nova Iguaçu" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
                         </div>
                         <div class="media-hover aspect-square bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md cursor-pointer">
-                            <img src="galeria/4.jpeg" 
-                                 alt="Nossa Loja 2" 
-                                 class="w-full h-full object-cover transition-transform duration-500">
+                            <img src="galeria/4.jpeg" alt="Atendimento na Drogaria Desconto Certo" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
                         </div>
                         <div class="media-hover aspect-square bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md cursor-pointer">
-                            <img src="galeria/1.jpeg" 
-                                 alt="Nossa Loja 3" 
-                                 class="w-full h-full object-cover transition-transform duration-500">
+                            <img src="galeria/1.jpeg" alt="Fachada da Drogaria Desconto Certo em Nova Iguaçu" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -179,9 +186,11 @@
         </div>
     </section>
 
+    <!-- Seção de localização com mapa e informações de contato -->
     <section id="localizacao" class="py-24 bg-gray-50 dark:bg-gray-800/50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Mapa incorporado do Google Maps -->
                 <div class="rounded-[2.5rem] h-[450px] overflow-hidden shadow-2xl border-8 border-white dark:border-gray-800 group relative">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.994925790091!2d-43.48352658886725!3d-22.728429979295083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99678b394f57c7%3A0xbbc02c3469b5c31f!2sDrogaria%20Desconto%20Certo!5e0!3m2!1spt-BR!2sbr!4v1775156450670!5m2!1spt-BR!2sbr" 
@@ -203,6 +212,7 @@
                     </div>
                 </div>
 
+                <!-- Informações de contato e horário -->
                 <div class="lg:pl-12">
                     <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">Estamos prontos para te atender.</h2>
                     <div class="space-y-8">
@@ -231,9 +241,11 @@
         </div>
     </section>
 
+    <!-- Rodapé com links e informações -->
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t border-gray-800 mt-auto">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Logo e descrição -->
                 <div class="space-y-4">
                     <a href="index.html" class="flex items-center gap-2">
                         <img src="logo.png" alt="Logo Drogaria Desconto Certo" class="h-10 w-auto object-contain">
@@ -250,6 +262,7 @@
                     </div>
                 </div>
 
+                <!-- Links rápidos -->
                 <div>
                     <h3 class="text-white font-bold mb-5 uppercase tracking-wider text-sm">Links Rápidos</h3>
                     <ul class="space-y-3 text-sm">
@@ -259,6 +272,7 @@
                     </ul>
                 </div>
 
+                <!-- Informações de contato -->
                 <div>
                     <h3 class="text-white font-bold mb-5 uppercase tracking-wider text-sm">Contato</h3>
                     <ul class="space-y-4 text-sm">
@@ -277,6 +291,7 @@
                     </ul>
                 </div>
 
+                <!-- Horário de funcionamento -->
                 <div>
                     <h3 class="text-white font-bold mb-5 uppercase tracking-wider text-sm">Funcionamento</h3>
                     <ul class="space-y-3 text-sm">
@@ -292,6 +307,7 @@
                 </div>
             </div>
 
+            <!-- Direitos autorais e créditos -->
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
                 <p>© 2026 Drogaria Desconto Certo. Todos os direitos reservados.</p>
                 <p class="flex items-center gap-1">Desenvolvido por <a href="https://mateuscalixto.com.br" style="color: #D31526;">Mateus Calixto</a></p>
@@ -299,7 +315,7 @@
         </div>
     </footer>
 
-    <!-- ====================== MODAL DE EXPANSÃO ====================== -->
+    <!-- Modal para exibir conteúdo adicional (ex: vídeo ou imagens ampliadas) -->
     <div id="modal" onclick="if(event.target.id === 'modal') closeModal()" 
          class="hidden fixed inset-0 bg-black/80 z-[9999] flex items-center justify-center p-4">
         
@@ -312,105 +328,50 @@
         </div>
     </div>
 
-    <script>
-        // ==================== FUNÇÕES DO MODAL ====================
-        function openImageModal(src) {
-            const content = document.getElementById('modal-content');
-            content.innerHTML = `
-                <div class="flex items-center justify-center">
-                    <img src="${src}" 
-                         alt="Imagem expandida" 
-                         class="modal-content w-full max-h-[80vh] object-contain rounded-2xl shadow-inner">
-                </div>
-            `;
-            document.getElementById('modal').classList.remove('hidden');
-            document.getElementById('modal').classList.add('flex');
+    <!-- Dados estruturados para SEO (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Pharmacy",
+      "name": "Drogaria Desconto Certo",
+      "description": "Farmácia com entrega rápida em Nova Iguaçu e região. Preços baixos e atendimento especializado.",
+      "url": "https://drogariadescontocerto.com.br",
+      "telephone": "+5521976285154",
+      "email": "contato@drogariadescontocerto.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "R. Antônio Coelho, 20",
+        "addressLocality": "Nova Iguaçu",
+        "addressRegion": "RJ",
+        "postalCode": "26210-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.728429979295083,
+        "longitude": -43.48352658886725
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "07:30",
+          "closes": "21:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "07:30",
+          "closes": "20:00"
         }
-
-        function openVideoModal() {
-            const youtubeEmbedUrl = 'https://www.youtube.com/embed/SEU_VIDEO_ID_AQUI'; 
-            
-            const content = document.getElementById('modal-content');
-            content.innerHTML = `
-                <div class="aspect-video w-full bg-black rounded-2xl overflow-hidden">
-                    <iframe 
-                        width="100%" 
-                        height="100%" 
-                        src="${youtubeEmbedUrl}" 
-                        title="Vídeo Institucional - Drogaria Desconto Certo"
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-                <p class="text-center text-xs text-gray-400 mt-4">Clique no play para assistir</p>
-            `;
-            document.getElementById('modal').classList.remove('hidden');
-            document.getElementById('modal').classList.add('flex');
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('modal');
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            
-            // Limpa o conteúdo (para parar o vídeo imediatamente)
-            document.getElementById('modal-content').innerHTML = '';
-        }
-
-        // ==================== INICIALIZAÇÃO ====================
-        document.addEventListener('DOMContentLoaded', () => {
-            // Menu mobile (mantido intacto)
-            const btn = document.getElementById('mobile-menu-btn');
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-                if (menu.classList.contains('hidden')) {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                } else {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-xmark');
-                }
-            });
-
-            mobileLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('hidden');
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
-                });
-            });
-
-            // ====================== EVENTOS DO MODAL ======================
-            
-            // 1. Vídeo do YouTube
-            const videoTrigger = document.getElementById('video-trigger');
-            if (videoTrigger) {
-                videoTrigger.addEventListener('click', openVideoModal);
-            }
-
-            // 2. Todas as imagens da galeria
-            const galleryImages = document.querySelectorAll('.media-hover');
-            galleryImages.forEach(el => {
-                el.addEventListener('click', () => {
-                    const img = el.querySelector('img');
-                    if (img && img.src) {
-                        openImageModal(img.src);
-                    }
-                });
-            });
-
-            // Fechar com tecla ESC
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    closeModal();
-                }
-            });
-        });
+      ],
+      "image": "https://drogariadescontocerto.com.br/galeria/3.jpeg",
+      "priceRange": "$$",
+      "areaServed": "Nova Iguaçu e região"
+    }
     </script>
+
+    <!-- Script JavaScript personalizado -->
+    <script src="script.js" defer></script>
 </body>
 </html>
